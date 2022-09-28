@@ -42,6 +42,7 @@ fun MainScreen(
         Destinations.Pantalla1,
         Destinations.Pantalla2,
         Destinations.Pantalla3,
+        Destinations.Pantalla4,
         Destinations.PantallaQR,
     )
     Scaffold(

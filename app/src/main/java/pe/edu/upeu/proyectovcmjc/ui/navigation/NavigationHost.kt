@@ -44,6 +44,16 @@ fun NavigationHost(
         composable(PantallaQR.route) {
             PantallaQR()
         }
+        composable(
+            Pantalla4.route,
+            arguments = listOf(navArgument("newText"){ defaultValue =
+                "Pantalla 4" })
+        ) { navBackStackEntry ->
+            var newText =
+                navBackStackEntry.arguments?.getString("newText")
+            requireNotNull(newText)
+            Pantalla4(newText, darkMode)
+        }
 
     }
 }

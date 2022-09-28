@@ -18,4 +18,8 @@ sealed class Destinations(
         Icons.Filled.Favorite)
     object PantallaQR: Destinations("pantallaQR", "Pantalla QR",
         Icons.Filled.Deck)
+    object Pantalla4: Destinations("pantalla4/?newText={newText}",
+        "Pantalla 4", Icons.Filled.Settings) {
+        fun createRoute(newText: String) = "pantalla4/?newText=$newText"
+    }
 }
