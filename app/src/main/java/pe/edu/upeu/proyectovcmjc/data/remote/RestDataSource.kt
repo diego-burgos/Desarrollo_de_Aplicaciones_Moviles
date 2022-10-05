@@ -6,7 +6,7 @@ import retrofit2.http.*
 
 interface RestDataSource {
     @GET("/apiv1/persona")
-    suspend fun reportarPersona(@Header("Autorization") token: String):Response<MsgModelResponse>
+    fun reportarPersona(@Header("Autorization") token: String):Response<MsgModelResponse>
 
     @GET("/apiv1/peronsa/{id}")
     suspend fun getPersonaId(@Header("Autorization") token: String,
